@@ -18,6 +18,7 @@ function TodoForm(props) {
     };
     //template
     return (
+
         <form onSubmit={handleSubmit}>
         <input 
         vale = {value}
@@ -25,6 +26,7 @@ function TodoForm(props) {
         placeholder="Add Todo..." 
         onChange={(event) => setValue(event.target.value)}
         />
+
     </form>
     );
 }

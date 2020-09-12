@@ -1,6 +1,7 @@
 import React , {useState} from "react"
-import TodoForm from "./components/TodoForm";
-import TodoItem from "./components/TodoItem";
+import TodoForm from "./components/TodoForm/TodoForm";
+import TodoItem from "./components/TodoItem/TodoItem";
+import "./App.css";
 
 function App() {
   //variables
@@ -18,12 +19,16 @@ function App() {
 
   // index creates identifier - useful in the future
   return (
-  <div>
+  <div className = "app">
+    <div className = "todo-list">
+    
     <h1>My todo list ✔</h1>
     {todos.map((todo, index) => (
       <TodoItem todo={todo} key={index} />
     ))}
+
     <TodoForm addTodo={addTodo} />
+  </div>
   </div>
   );
 }
